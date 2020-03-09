@@ -1,0 +1,26 @@
+{
+  "name": "platform.macro",
+  "version": "1.0.0",
+  "main": "platform.macro.js",
+  "license": "MIT",
+  "files": [
+    "platform.macro.js"
+  ],
+  "keywords": [
+    "macro",
+    "小程序",
+    "code split"
+  ],
+  "devDependencies": {
+    "babel-plugin-macros": "^2.0.0",
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "ast-pretty-print": "^2.0.0",
+    "babel-jest": "^25.1.0",
+    "babel-plugin-tester": "^8.0.1",
+    "jest": "^25.1.0"
+  },
+  "scripts": {
+    "test": "jest -i"
+  }
+}
