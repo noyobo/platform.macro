@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "platform.macro.js",
   "license": "MIT",
+  "typings": "index.d.ts",
   "files": [
-    "platform.macro.js"
+    "platform.macro.js",
+    "index.d.ts"
   ],
   "keywords": [
     "macro",
