@@ -1,4 +1,10 @@
 declare module 'platform.macro' {
+  export default {
+    isWeb: boolean,
+    isWechat: boolean,
+    isToutiao: boolean
+  };
+
   /**
    * web 平台
    */

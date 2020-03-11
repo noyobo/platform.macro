@@ -5,7 +5,12 @@ const isToutiaoValue = process.env.PLATFORM === 'toutiao';
 const isWebValue = process.env.PLATFORM === 'web';
 
 function platformMacro({ references, babel }) {
-  const { isWechat = [], isToutiao = [], isWeb = [] } = references;
+  const {
+    default: platform = [],
+    isWechat = [],
+    isToutiao = [],
+    isWeb = []
+  } = references;
 
   isToutiao.forEach(reference => {
     reference.replaceWith(babel.types.booleanLiteral(isToutiaoValue));
@@ -15,6 +20,24 @@ function platformMacro({ references, babel }) {
   });
   isWeb.forEach(reference => {
     reference.replaceWith(babel.types.booleanLiteral(isWebValue));
+  });
+  platform.forEach(reference => {
+    reference.replaceWith(
+      babel.types.ObjectExpression([
+        babel.types.ObjectProperty(
+          babel.types.StringLiteral('isWeb'),
+          babel.types.booleanLiteral(isWebValue)
+        ),
+        babel.types.ObjectProperty(
+          babel.types.StringLiteral('isWechat'),
+          babel.types.booleanLiteral(isWechatValue)
+        ),
+        babel.types.ObjectProperty(
+          babel.types.StringLiteral('isToutiao'),
+          babel.types.booleanLiteral(isToutiaoValue)
+        )
+      ])
+    );
   });
 }
 
