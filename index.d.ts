@@ -1,10 +1,11 @@
 declare module 'platform.macro' {
-  export default {
-    isWeb: boolean,
-    isWechat: boolean,
-    isToutiao: boolean
+  const platform: {
+    isWeb: boolean;
+    isWechat: boolean;
+    isToutiao: boolean;
   };
 
+  export default platform;
   /**
    * web 平台
    */
