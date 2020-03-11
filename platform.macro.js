@@ -1,10 +1,10 @@
 const { createMacro } = require('babel-plugin-macros');
 
-const isWechatValue = process.env.PLATFORM === 'wechat';
-const isToutiaoValue = process.env.PLATFORM === 'toutiao';
-const isWebValue = process.env.PLATFORM === 'web';
-
 function platformMacro({ references, babel }) {
+  const isWechatValue = process.env.PLATFORM === 'wechat';
+  const isToutiaoValue = process.env.PLATFORM === 'toutiao';
+  const isWebValue = process.env.PLATFORM === 'web';
+
   const {
     default: platform = [],
     isWechat = [],
