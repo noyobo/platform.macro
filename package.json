@@ -1,6 +1,6 @@
 {
   "name": "platform.macro",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "platform.macro.js",
   "license": "MIT",
   "typings": "index.d.ts",
