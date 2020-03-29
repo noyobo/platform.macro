@@ -1,5 +1,4 @@
-import { isWechat, isToutiao, isWeb } from '../../platform.macro';
+import { isWechat, isToutiao, isWeb, isMini } from '../../platform.macro';
 
-const toutiao = isToutiao;
-
-console.log(toutiao);
+console.log(isToutiao);
+console.log(isMini);

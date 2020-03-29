@@ -1,2 +1,2 @@
-const wechat = true;
-console.log(wechat);
+console.log(true);
+console.log(true);
