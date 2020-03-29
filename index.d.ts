@@ -3,6 +3,8 @@ declare module 'platform.macro' {
     isWeb: boolean;
     isWechat: boolean;
     isToutiao: boolean;
+    isAlipay: boolean;
+    isMini: boolean;
   };
 
   export default platform;
@@ -18,4 +20,12 @@ declare module 'platform.macro' {
    * 字节跳动小程序
    */
   export const isToutiao: boolean;
+  /**
+   * 支付宝小程序
+   */
+  export const isAlipay: boolean;
+  /**
+   * 小程序
+   */
+  export const isMini: boolean;
 }
