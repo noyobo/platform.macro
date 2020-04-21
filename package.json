@@ -25,5 +25,8 @@
   "scripts": {
     "prepublishOnly": "npm run test",
     "test": "jest -i"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
   }
 }
