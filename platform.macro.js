@@ -3,16 +3,16 @@ const { createMacro } = require('babel-plugin-macros');
 function platformMacro({ references, babel }) {
   const isWechatValue = process.env.PLATFORM === 'wechat';
   const isToutiaoValue = process.env.PLATFORM === 'toutiao';
-  const isAlipayValue = process.env.PLATFORM === 'alipay';
+  const isAliValue = process.env.PLATFORM === 'ali';
   const isMiniValue =
-    ['alipay', 'wechat', 'toutiao'].indexOf(process.env.PLATFORM) !== -1;
+    ['ali', 'wechat', 'toutiao'].indexOf(process.env.PLATFORM) !== -1;
   const isWebValue = process.env.PLATFORM === 'web';
 
   const {
     default: platform = [],
     isWechat = [],
     isToutiao = [],
-    isAlipay = [],
+    isAli = [],
     isMini = [],
     isWeb = []
   } = references;
@@ -23,8 +23,8 @@ function platformMacro({ references, babel }) {
   isWechat.forEach(reference => {
     reference.replaceWith(babel.types.booleanLiteral(isWechatValue));
   });
-  isAlipay.forEach(reference => {
-    reference.replaceWith(babel.types.booleanLiteral(isAlipayValue));
+  isAli.forEach(reference => {
+    reference.replaceWith(babel.types.booleanLiteral(isAliValue));
   });
   isWeb.forEach(reference => {
     reference.replaceWith(babel.types.booleanLiteral(isWebValue));
@@ -48,8 +48,8 @@ function platformMacro({ references, babel }) {
           babel.types.booleanLiteral(isToutiaoValue)
         ),
         babel.types.ObjectProperty(
-          babel.types.StringLiteral('isAlipay'),
-          babel.types.booleanLiteral(isAlipayValue)
+          babel.types.StringLiteral('isAli'),
+          babel.types.booleanLiteral(isAliValue)
         ),
         babel.types.ObjectProperty(
           babel.types.StringLiteral('isMini'),

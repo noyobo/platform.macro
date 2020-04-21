@@ -4,7 +4,7 @@ const web1 = {
   isWeb: true,
   isWechat: false,
   isToutiao: false,
-  isAlipay: false,
+  isAli: false,
   isMini: false
 }.isWeb;
 console.log(web1);

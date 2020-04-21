@@ -2,7 +2,7 @@ import {
   isWechat,
   isToutiao,
   isWeb,
-  isAlipay,
+  isAli,
   isMini
 } from '../../platform.macro';
 

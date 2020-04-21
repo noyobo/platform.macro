@@ -7,12 +7,12 @@ pluginTester({
   plugin,
   tests: [
     {
-      title: 'alipay',
+      title: 'ali',
       snapshot: false,
-      fixture: join(__dirname, '../__fixtures__/alipay/code.js'),
-      outputFixture: join(__dirname, '../__fixtures__/alipay/output.js'),
+      fixture: join(__dirname, '../__fixtures__/ali/code.js'),
+      outputFixture: join(__dirname, '../__fixtures__/ali/output.js'),
       setup() {
-        process.env.PLATFORM = 'alipay';
+        process.env.PLATFORM = 'ali';
       }
     }
   ],

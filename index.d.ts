@@ -3,7 +3,7 @@ declare module 'platform.macro' {
     isWeb: boolean;
     isWechat: boolean;
     isToutiao: boolean;
-    isAlipay: boolean;
+    isAli: boolean;
     isMini: boolean;
   };
 
@@ -23,7 +23,7 @@ declare module 'platform.macro' {
   /**
    * 支付宝小程序
    */
-  export const isAlipay: boolean;
+  export const isAli: boolean;
   /**
    * 小程序
    */
